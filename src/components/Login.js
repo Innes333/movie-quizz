@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
 import { app, facebookProvider } from '../base';
 
+
 const loginStyles = {
   width: "90%",
   maxWidth: "315px",
@@ -76,7 +77,7 @@ class Login extends Component {
     return (
       <div style={loginStyles}>
         <Toaster ref={(element) => { this.toaster = element }} />
-        <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
+        <button style={{width: "100%"}} className="main-btn" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
         <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
         <form onSubmit={(event) => { this.authWithEmailPassword(event) }} ref={(form) => { this.loginForm = form }}>
           <div style={{marginBottom: "10px"}} className="pt-callout pt-icon-info-sign">
@@ -91,7 +92,7 @@ class Login extends Component {
             Password
             <input style={{width: "100%"}} className="pt-input" name="password" type="password" ref={(input) => { this.passwordInput = input }} placeholder="Password"></input>
           </label>
-          <input style={{width: "100%"}} type="submit" className="pt-button pt-intent-primary" value="Log In"></input>
+          <button style={{width: "100%"}} type="submit" className="main-btn">Log In</button>
 
         </form>
       </div>

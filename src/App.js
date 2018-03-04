@@ -9,6 +9,8 @@ import MovieEditor from './components/MovieEditor';
 import MovieList from './components/MovieList';
 import { app, base } from './base';
 
+import './styles/main.css';
+
 function AuthenticatedRoute({component: Component, authenticated, ...rest}) {
   return (
     <Route
